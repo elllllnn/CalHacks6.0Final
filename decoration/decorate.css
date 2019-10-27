@@ -1,0 +1,23 @@
+body {
+  font-size: 30px;
+  background:teal;
+}
+
+
+h1 {
+  color: white;
+}
+
+
+a {
+  font-size: 30px;
+  /*font-family: "Cambria";*/
+  background: white;
+  border-radius: 5px;
+  color: navy;
+  padding: 10px 30px;
+}
+
+#navbar {
+  font-family: Verdana;
+}
