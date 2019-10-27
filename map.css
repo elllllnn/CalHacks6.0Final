@@ -1,0 +1,68 @@
+
+/*how to get longer posts to not run out of post box?*/
+
+.text {
+	  text-align: left;
+	  font-family: Verdana;
+	  color: #ffcc66;
+	  margin-left: 3%;
+
+}
+
+#button {
+	border: 0;
+	border-radius: 5px;
+	padding: 4px;
+	font-family: Verdana;
+	color: white;
+	background-color: #ffcc66;
+}
+
+#input {
+	border-radius: 5px;
+	padding: 4px;
+	font-family: Verdana;
+	border: 2px solid #ffcc66;
+}
+
+.postList {
+	margin: 0 3%;
+}
+
+.post {
+	border: 2px solid #ffcc66;
+	color: #ffcc66;
+	border-radius: 5px;
+	padding: 0.5% 2%;
+	font-size: 17px;
+	font-family: Verdana;
+	margin-bottom: 1%;
+	word-wrap: break-word;
+}
+
+.time {
+	font-size: 255px;
+
+}
+
+#map{
+    height:400px;
+		width: 40%;
+		position: fixed;
+    }
+
+.row {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.row .postList {
+	width: 300px;
+}
+.row #map {
+	width: 0;
+	flex-grow: 1;
+}

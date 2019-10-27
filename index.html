@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Bear Buddies</title>
+  <link href="decoration/decorate.css" rel="stylesheet" type."text/css"/>
+
+	<link rel="stylesheet" href="map.css" />
+
+
+  </head>
+
+  <body>
+    <div class="text">
+	  <h1>Connect me!</h1>
+
+    <div id="navbar">
+      <a href="Buddy_System.html"><strong>Buddy System</strong></a>
+      <a href="Campus_Activities.html"><strong>Campus Activities</strong></a>
+      <a href="Fitness.html"><strong>Fitness</strong></a>
+      <a href="Food.html"><strong>Food</strong></a>
+    </div>
+
+	  <h4>Make a post!</h4>
+	  <input placeholder="I want to go to..." id="input"></input>
+
+	  <button id="button">Post</button>
+	</div>
+
+  <div class="row">
+    <div class="postList">
+  	  <!--
+  	  the structure of postList and post
+  	  NOTE: postList has to exist in the html file
+  	  <div class="post">
+  	    <p>Hey there!</p>
+  	  </div>-->
+  	</div>
+
+  	<div id="map"></div>
+  </div>
+
+    <script>
+		function initMap(){
+		  var options = {
+			zoom: 15.25,
+			center:{lat:37.8715, lng:-122.2600}
+		  }
+		  var map = new google.maps.Map(document.getElementById('map'), options);
+		  /*
+		  var marker = new google.maps.Marker({
+			position:{lat:37.868538, lng:-122.259032},
+			map:map,
+		  });
+
+		  var infoWindow = new google.maps.InfoWindow({
+			content: '<h1>Sheng Kee Bakery</h1>'
+		  });
+
+		  marker.addListener('click', function(){
+			infoWindow.open(map, marker);
+		  });
+		  */
+
+		  addMarker({lat:37.868538, lng:-122.259032});
+		  addMarker({lat:37.872574, lng:-122.260880});
+		  addMarker({lat:37.871888, lng:-122.269101});
+
+		  function addMarker(coords){
+			var marker = new google.maps.Marker({
+			  position:coords,
+			  map:map,
+			});
+		  }
+		}
+
+   </script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_-v9eqv1ppjDNhaMBiwhIVp9IAz9lTyw&callback=initMap"
+    async defer></script>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+	   <script src="scripts.js"></script>
+  </body>
+</html>
